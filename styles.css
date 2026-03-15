@@ -1,0 +1,77 @@
+/*  Estilos generales */
+
+body {
+    background-color: black;
+    margin: 0 !important;
+    padding: 0 !important;
+
+}
+
+
+
+
+/* Header de navegación */
+
+#main-nav {
+    background:
+        linear-gradient(rgba(71, 11, 11, 0.452), rgba(0, 0, 0, 0.8)),
+        url('resources/EJ_Banner.png') center/cover no-repeat !important;
+
+    min-height: 120px;
+    z-index: -1;
+
+    border-bottom: 5px solid #640c0c;
+}
+
+.hamburguesa {
+    z-index: 1;
+}
+
+.navbar-brand span {
+     font-family: 'Orbitron', sans-serif;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-bottom: 0;
+
+     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
+}
+
+ 
+
+
+
+/* para que cuando se colapse no se expanda la imagen */
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.9);
+        /* Fondo sólido para que se lea bien */
+        z-index: 1000;
+        padding: 1rem;
+    }
+
+    #main-nav {
+        /* Fijamos la altura para que no crezca al abrir el menú */
+        height: 120px !important;
+        position: relative;
+    }
+
+
+    .hamburg-main {
+            background-color:  rgba(29, 28, 28, 0.308);
+
+    }
+
+    .hambug-item a {
+    display: inline-block;
+     border-bottom: 2px solid #640c0c;
+    
+ }
+
+
+}
