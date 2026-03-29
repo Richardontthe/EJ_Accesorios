@@ -80,7 +80,7 @@ a {
   inset: 0;
   background-image:
     linear-gradient(to right, rgba(0,0,0,0.9), rgba(227,30,36,0.4)),
-    url('resources/EJ_Banner.png');
+    url('resources/images/EJ_Banner.png');
   background-size: cover;
   background-position: center;
   z-index: 0;
@@ -328,12 +328,17 @@ a {
 }
 
 .news-thumb {
-  width: 6rem;
-  height: 6rem;
+  width: 8rem;
+  height: 5rem;
   border-radius: 0.5rem;
   background-size: cover;
   background-position: center;
   flex-shrink: 0;
+}
+.flamingo{
+  width: 6rem;
+  height: 5rem;
+ 
 }
 
 .news-body {
