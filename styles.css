@@ -233,7 +233,7 @@ a {
 .hero-badge {
   display: inline-block;
   background-color: var(--primary);
-  color: var(--bg-dark);
+  color: white
   font-size: 0.625rem;
   font-weight: 700;
   padding: 0.25rem 0.5rem;
@@ -252,7 +252,7 @@ a {
 
 .hero-desc {
   font-size: 0.75rem;
-  color: #e2e8f0;  /* slate-200 */
+  color: var(--accent);  /* slate-200 */
   margin-top: 0.25rem;
   margin-bottom: 0;
 }
@@ -587,4 +587,10 @@ a {
   word-wrap: normal;
   direction: ltr;
   -webkit-font-smoothing: antialiased;
+}
+/* Iconos de font awesome */
+
+.fab {
+ font-size: 1.5rem;
+
 }
