@@ -981,3 +981,324 @@ a {
    width: 25rem;
    border: #c41920 1px solid;
  }
+
+ /* =============================================
+   Contenedores de los productos
+   ============================================= */
+ 
+ 
+.productos-header {
+  border-bottom: 1px solid var(--zinc-800);
+}
+
+.productos-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #f1f5f9;
+  margin: 0;
+}
+
+.productos-subtitle {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin: 0.2rem 0 0;
+}
+
+/* ---------- Barra de búsqueda ---------- */
+.productos-search-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: var(--zinc-900);
+  border: 1px solid var(--zinc-800);
+  border-radius: 0.625rem;
+  padding: 0 0.75rem;
+  transition: border-color 0.2s;
+}
+
+.productos-search-bar:focus-within {
+  border-color: var(--primary);
+}
+
+.search-icon {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  pointer-events: none;
+}
+
+.search-input {
+  flex: 1;
+  background: none;
+  border: none;
+  outline: none;
+  color: #f1f5f9;
+  font-family: var(--font-main);
+  font-size: 0.875rem;
+  padding: 0.65rem 0.5rem;
+}
+
+.search-input::placeholder {
+  color: var(--text-muted);
+}
+
+.search-clear-btn {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  transition: color 0.2s;
+}
+
+.search-clear-btn:hover {
+  color: var(--primary);
+}
+
+.search-clear-btn .material-symbols-outlined {
+  font-size: 1rem;
+}
+
+/* ---------- Contador de resultados ---------- */
+.productos-count {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+/* ---------- Card de producto ---------- */
+.producto-card {
+  background-color: var(--zinc-900);
+  border: 1px solid var(--zinc-800);
+  border-radius: 0.75rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.producto-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-2px);
+}
+
+.producto-img-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.producto-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s;
+}
+
+.producto-card:hover .producto-img {
+  transform: scale(1.04);
+}
+
+.producto-badge {
+  position: absolute;
+  top: 0.6rem;
+  left: 0.6rem;
+  background-color: var(--primary);
+  color: #fff;
+  font-size: 0.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.25rem;
+}
+
+.producto-body {
+  padding: 0.875rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.producto-nombre {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #f1f5f9;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.producto-descripcion {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.producto-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 0.25rem;
+}
+
+.producto-precio {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+/* Control de cantidad */
+.producto-cantidad {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--zinc-800);
+  border-radius: 0.5rem;
+  padding: 0.2rem 0.4rem;
+}
+
+.cantidad-btn {
+  background: none;
+  border: none;
+  color: #f1f5f9;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  transition: color 0.2s;
+}
+
+.cantidad-btn:hover {
+  color: var(--primary);
+}
+
+.cantidad-btn .material-symbols-outlined {
+  font-size: 1rem;
+}
+
+.cantidad-valor {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #f1f5f9;
+  min-width: 1rem;
+  text-align: center;
+}
+
+/* Botón agregar al carrito */
+.btn-agregar-carrito {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  background-color: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.6rem 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+  font-family: var(--font-main);
+}
+
+.btn-agregar-carrito:hover {
+  background-color: #c41920;
+  transform: translateY(-1px);
+}
+
+.btn-agregar-carrito:active {
+  transform: translateY(0);
+}
+
+.btn-agregar-carrito .material-symbols-outlined {
+  font-size: 1.1rem;
+}
+
+/* ---------- Sin resultados ---------- */
+.sin-resultados {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1rem;
+  color: var(--text-muted);
+  text-align: center;
+  gap: 0.5rem;
+}
+
+.sin-resultados .material-symbols-outlined {
+  font-size: 3rem;
+  color: var(--zinc-800);
+}
+
+.sin-resultados p {
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+/* ---------- Paginación ---------- */
+.productos-pagination {
+  display: flex;
+  justify-content: center;
+}
+
+.pagination-custom {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.page-btn {
+  min-width: 2.25rem;
+  height: 2.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--zinc-900);
+  border: 1px solid var(--zinc-800);
+  border-radius: 0.5rem;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  font-weight: 600;
+  font-family: var(--font-main);
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+  padding: 0 0.5rem;
+}
+
+.page-btn:hover:not(:disabled) {
+  border-color: var(--primary);
+  color: #fff;
+}
+
+.page-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.page-btn-active {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: #fff !important;
+}
+
+.page-btn .material-symbols-outlined {
+  font-size: 1.1rem;
+}
