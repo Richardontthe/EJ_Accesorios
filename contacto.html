@@ -26,6 +26,11 @@
     <!-- JQuery -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
+    <!-- key AIzaSyAwP0Z83hDRmsgRQXtvDXT9AVEWFhS8rA0 -->
+    <script async src="https://maps.googleapis.com/maps/api/js?key=xxx&callback=inicializarMapa&libraries=geometry">
+    </script>
+
+
 
 </head>
 
@@ -225,6 +230,44 @@
 
 
 
+    <div class="row mt-5">
+
+        <section class="info-section mt-5">
+            <div class="info-header">
+                <span class="material-symbols-outlined">my_location</span>
+                <h3 class="section-title">Encuentranos</h3>
+            </div>
+
+
+
+            <div class="col-12 text-center mb-2">
+                <button id="btnUbicacion" class="btn btn-warning EJBtn">
+                    ¿Cómo puedo llegar?
+                </button>
+                <!-- Mensajes de error para el manejo de errores. -->
+                <p id="mensajeError" class="text-danger mt-2"></p>
+            </div>
+            <!-- Este es el mapita -->
+            <div class="col-12 d-flex justify-content-center mb-4">
+                <div id="mapa" style="height:400px; width:80%;"></div>
+            </div>
+            <section class="d-flex justify-content-center">
+
+
+                <div class="col-12 p-3 text-center  accordion-header  text-white-50 bg-dark  distanciaInfo ">
+                    <p id="distanciaInfo"></p>
+                    <p id="rutaInfo"></p>
+                    <p id="tiempoInfo"></p>
+                </div>
+
+            </section>
+
+
+
+
+        </section>
+
+    </div>
 
 
 
@@ -307,6 +350,8 @@
 
     <!-- Script para el formulario -->
     <script src="assets/formulario.js"></script>
+    <!-- Script para el googleMaps -->
+    <script src="assets/GoogleMaps.js"></script>
 
 </body>
 

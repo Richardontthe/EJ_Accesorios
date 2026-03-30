@@ -640,7 +640,7 @@ a {
 }
 
  
-    /* ── Tarjeta ── */
+    /*   Tarjeta   */
     .form-card {
       background: var(--zinc-900);
       border: 1px solid var(--border-dark);
@@ -651,7 +651,7 @@ a {
       box-shadow: 0 20px 60px rgba(0,0,0,0.6);
     }
  
-    /* ── Header ── */
+    /*   Header   */
     .form-header {
       background-color: var(--bg-dark);
       border-bottom: 3px solid var(--primary);
@@ -685,10 +685,10 @@ a {
       margin-bottom: 0;
     }
  
-    /* ── Cuerpo ── */
+    /*   Cuerpo   */
     .form-body { padding: 1.75rem 2rem 2rem; }
  
-    /* ── Separadores de sección ── */
+    /*   Separadores de sección   */
     .section-label {
       font-size: 0.62rem;
       font-weight: 700;
@@ -702,7 +702,7 @@ a {
     }
     .section-label:first-child { border-top: none; padding-top: 0; margin-top: 0; }
  
-    /* ── Labels ── */
+    /*   Labels   */
     .form-label {
       font-size: 0.78rem;
       font-weight: 600;
@@ -711,7 +711,7 @@ a {
       margin-bottom: 0.35rem;
     }
  
-    /* ── Inputs ── */
+    /*   Inputs   */
     .form-control, .form-select {
       border: 1px solid var(--zinc-800);
       border-radius: 0.5rem;
@@ -745,7 +745,7 @@ a {
       margin-top: 0.3rem;
     }
  
-    /* ── Range ── */
+    /*   Range   */
     .form-range { accent-color: var(--primary); width: 100%; }
  
     .range-labels {
@@ -767,7 +767,7 @@ a {
       margin-top: 0.5rem;
     }
  
-    /* ── Radio (género) ── */
+    /*   Radio (género)   */
     .gender-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -798,7 +798,7 @@ a {
  
     .gender-option label:hover { border-color: var(--primary); color: #fff; }
  
-    /* ── Edad badge ── */
+    /*   Edad badge   */
     .edad-badge {
       display: inline-flex;
       align-items: center;
@@ -812,7 +812,7 @@ a {
       min-height: 2.4rem;
     }
  
-    /* ── Dropdown multiselect ── */
+    /*   Dropdown multiselect   */
     .multiselect-wrapper { position: relative; }
  
     .multiselect-trigger {
@@ -902,7 +902,7 @@ a {
       background-size: 9px;
     }
  
-    /* ── Chips ── */
+    /*   Chips   */
     .chips-container {
       display: flex;
       flex-wrap: wrap;
@@ -944,7 +944,7 @@ a {
  
     .chip-remove:hover { color: var(--accent); }
  
-    /* ── Submit ── */
+    /*   Submit   */
     .btn-submit {
       background-color: var(--primary);
       color: #fff;
@@ -965,7 +965,7 @@ a {
     .btn-submit:hover { background-color: #c41920; color: var(--accent); }
     .btn-submit:active { transform: translateY(1px); }
  
-    /* ── Validación ── */
+    /*   Validación   */
     .invalid-feedback { font-size: 0.73rem; color: #f87171; }
     .was-validated .form-control:invalid { border-color: #f87171 !important; }
 
@@ -973,3 +973,11 @@ a {
     .grado-acad-dd {
       margin-bottom: 0rem;
     }
+
+
+/* mapa */
+
+.distanciaInfo {
+   width: 25rem;
+   border: #c41920 1px solid;
+ }
