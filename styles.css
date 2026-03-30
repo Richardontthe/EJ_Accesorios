@@ -640,3 +640,336 @@ a {
 }
 
  
+    /* ── Tarjeta ── */
+    .form-card {
+      background: var(--zinc-900);
+      border: 1px solid var(--border-dark);
+      border-radius: 0.75rem;
+      max-width: 640px;
+      width: 100%;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+    }
+ 
+    /* ── Header ── */
+    .form-header {
+      background-color: var(--bg-dark);
+      border-bottom: 3px solid var(--primary);
+      padding: 2rem 2rem 1.6rem;
+    }
+ 
+    .form-header .eyebrow {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.4rem;
+    }
+ 
+    .form-header h1 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
+      font-style: italic;
+      line-height: 1.1;
+      margin: 0;
+    }
+ 
+    .form-header p {
+      color: var(--text-muted);
+      font-size: 0.82rem;
+      margin-top: 0.4rem;
+      margin-bottom: 0;
+    }
+ 
+    /* ── Cuerpo ── */
+    .form-body { padding: 1.75rem 2rem 2rem; }
+ 
+    /* ── Separadores de sección ── */
+    .section-label {
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--primary);
+      border-top: 1px solid var(--border-dark);
+      padding-top: 1.3rem;
+      margin-top: 1.5rem;
+      margin-bottom: 1.1rem;
+    }
+    .section-label:first-child { border-top: none; padding-top: 0; margin-top: 0; }
+ 
+    /* ── Labels ── */
+    .form-label {
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      color: #cbd5e1;
+      margin-bottom: 0.35rem;
+    }
+ 
+    /* ── Inputs ── */
+    .form-control, .form-select {
+      border: 1px solid var(--zinc-800);
+      border-radius: 0.5rem;
+      background: var(--bg-dark);
+      color: #f1f5f9;
+      font-family: var(--font-main);
+      font-size: 0.88rem;
+      padding: 0.6rem 0.85rem;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+ 
+    .form-control::placeholder { color: var(--text-subtle); }
+ 
+    .form-control:focus, .form-select:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(227,30,36,0.18);
+      outline: none;
+      background: var(--bg-dark);
+      color: #f1f5f9;
+    }
+ 
+    input[type="date"]::-webkit-calendar-picker-indicator {
+      filter: invert(1);
+      opacity: 0.5;
+      cursor: pointer;
+    }
+ 
+    .form-text {
+      font-size: 0.73rem;
+      color: var(--text-subtle);
+      margin-top: 0.3rem;
+    }
+ 
+    /* ── Range ── */
+    .form-range { accent-color: var(--primary); width: 100%; }
+ 
+    .range-labels {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.68rem;
+      color: var(--text-subtle);
+      margin-top: 0.2rem;
+    }
+ 
+    .range-value-display {
+      display: inline-block;
+      background: var(--primary);
+      color: #fff;
+      font-size: 0.74rem;
+      font-weight: 700;
+      padding: 0.2rem 0.7rem;
+      border-radius: 0.35rem;
+      margin-top: 0.5rem;
+    }
+ 
+    /* ── Radio (género) ── */
+    .gender-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.5rem;
+    }
+ 
+    .gender-option input[type="radio"] { display: none; }
+ 
+    .gender-option label {
+      display: block;
+      text-align: center;
+      border: 1px solid var(--zinc-800);
+      border-radius: 0.5rem;
+      padding: 0.5rem 0.3rem;
+      font-size: 0.8rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.15s;
+      color: var(--text-muted);
+      background: var(--bg-dark);
+    }
+ 
+    .gender-option input[type="radio"]:checked + label {
+      border-color: var(--primary);
+      background: var(--dark-primary);
+      color: #fff;
+    }
+ 
+    .gender-option label:hover { border-color: var(--primary); color: #fff; }
+ 
+    /* ── Edad badge ── */
+    .edad-badge {
+      display: inline-flex;
+      align-items: center;
+      background: rgba(227,30,36,0.1);
+      border: 1px solid rgba(227,30,36,0.35);
+      border-radius: 0.5rem;
+      padding: 0.35rem 0.75rem;
+      font-size: 0.8rem;
+      color: var(--primary);
+      font-weight: 600;
+      min-height: 2.4rem;
+    }
+ 
+    /* ── Dropdown multiselect ── */
+    .multiselect-wrapper { position: relative; }
+ 
+    .multiselect-trigger {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border: 1px solid var(--zinc-800);
+      border-radius: 0.5rem;
+      background: var(--bg-dark);
+      padding: 0.6rem 0.85rem;
+      cursor: pointer;
+      font-size: 0.88rem;
+      color: var(--text-subtle);
+      user-select: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      min-height: 2.5rem;
+    }
+ 
+    .multiselect-trigger:hover,
+    .multiselect-trigger.open { border-color: var(--primary); }
+ 
+    .multiselect-trigger.open {
+      box-shadow: 0 0 0 3px rgba(227,30,36,0.18);
+    }
+ 
+    .multiselect-trigger .arrow {
+      font-size: 0.65rem;
+      color: var(--text-subtle);
+      transition: transform 0.2s;
+      flex-shrink: 0;
+      margin-left: 0.5rem;
+    }
+ 
+    .multiselect-trigger.open .arrow { transform: rotate(180deg); }
+ 
+    .multiselect-dropdown {
+      display: none;
+      position: absolute;
+      top: calc(100% + 4px);
+      left: 0; right: 0;
+      background: var(--zinc-900);
+      border: 1px solid var(--border-dark);
+      border-radius: 0.5rem;
+      box-shadow: 0 12px 32px rgba(0,0,0,0.6);
+      z-index: 400;
+      overflow: hidden;
+    }
+ 
+    .multiselect-dropdown.open { display: block; }
+ 
+    .multiselect-option {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      padding: 0.6rem 0.85rem;
+      font-size: 0.83rem;
+      cursor: pointer;
+      color: var(--text-muted);
+      transition: background 0.12s;
+      border-bottom: 1px solid var(--border-dark);
+    }
+ 
+    .multiselect-option:last-child { border-bottom: none; }
+    .multiselect-option:hover { background: var(--zinc-800); color: #fff; }
+ 
+    .multiselect-option.selected {
+      color: #fff;
+      font-weight: 600;
+      background: rgba(227,30,36,0.1);
+    }
+ 
+    .opt-check {
+      width: 15px; height: 15px;
+      border: 1.5px solid var(--zinc-800);
+      border-radius: 3px;
+      flex-shrink: 0;
+      transition: all 0.15s;
+      background: transparent;
+    }
+ 
+    .multiselect-option.selected .opt-check {
+      background: var(--primary);
+      border-color: var(--primary);
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 10 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 4l3 3 5-6' stroke='%23fff' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 9px;
+    }
+ 
+    /* ── Chips ── */
+    .chips-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      margin-top: 0.5rem;
+    }
+ 
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      background: var(--dark-primary);
+      border: 1px solid var(--primary);
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 0.22rem 0.5rem 0.22rem 0.65rem;
+      border-radius: 100px;
+      animation: chipIn 0.15s ease;
+    }
+ 
+    @keyframes chipIn {
+      from { opacity: 0; transform: scale(0.8); }
+      to   { opacity: 1; transform: scale(1); }
+    }
+ 
+    .chip-remove {
+      background: none;
+      border: none;
+      color: rgba(255,255,255,0.55);
+      cursor: pointer;
+      font-size: 0.85rem;
+      line-height: 1;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      transition: color 0.12s;
+    }
+ 
+    .chip-remove:hover { color: var(--accent); }
+ 
+    /* ── Submit ── */
+    .btn-submit {
+      background-color: var(--primary);
+      color: #fff;
+      border: none;
+      border-radius: 0.75rem;
+      padding: 0.8rem 2rem;
+      font-family: var(--font-main);
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background-color 0.2s, color 0.2s, transform 0.1s;
+      width: 100%;
+      margin-top: 1.8rem;
+    }
+ 
+    .btn-submit:hover { background-color: #c41920; color: var(--accent); }
+    .btn-submit:active { transform: translateY(1px); }
+ 
+    /* ── Validación ── */
+    .invalid-feedback { font-size: 0.73rem; color: #f87171; }
+    .was-validated .form-control:invalid { border-color: #f87171 !important; }
+
+
+    .grado-acad-dd {
+      margin-bottom: 0rem;
+    }

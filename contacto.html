@@ -53,8 +53,8 @@
         <div class="nav-inner">
             <a href="index.html" class="nav-link ">Home</a>
             <a href="#" class="nav-link">Productos</a>
-            <a href="#" class="nav-link">Contacto</a>
-            <a href="#" class="nav-link active ">FAQs</a>
+            <a href="#" class="nav-link active">Contacto</a>
+            <a href="FAQs.html" class="nav-link  ">FAQs</a>
             <a href="#" class="nav-link">Acerca De</a>
         </div>
     </nav>
@@ -62,7 +62,7 @@
     <!-- Title-->
 
     <section class="container-fluid">
-        <div class="row mb-5 mt-2 align-items-center justify-content-center">
+        <div class="row mb-3 mt-2 align-items-center justify-content-center">
 
             <div class="col-12 col-md-8 mt-2 mt-md-5 text-center">
                 <h1 class="Principal-title text-center">
@@ -84,17 +84,144 @@
     <div class="row">
 
 
-            <div class="EJ-contact-form">
-        
-        
-        
+        <div class="EJ-contact-form  d-flex align-items-center justify-content-center">
+
+            <div class="form-card">
+
+                <div class="form-header">
+                    <h1>Formulario</h1>
+                    <p>Complete todos los campos para continuar</p>
+                </div>
+
+                <div class="form-body">
+                    <form id="registroForm" novalidate>
+
+                        <!-- DATOS DE CONTACTO -->
+                        <div class="section-label">Datos de Contacto</div>
+
+                        <div class="mb-3">
+                            <label for="nombreCompleto" class="form-label">Nombre completo</label>
+                            <input type="text" class="form-control" id="nombreCompleto" name="nombre"
+                                placeholder="Ej: Ana María López" required>
+                            <div class="invalid-feedback">Por favor ingrese su nombre completo.</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Correo electrónico</label>
+                            <input type="email" class="form-control" id="email" name="email"
+                                placeholder="ejemplo@correo.com" required>
+                            <div class="invalid-feedback">Ingrese un correo electrónico válido.</div>
+                        </div>
+
+                        <!-- DATOS PERSONALES -->
+                        <div class="section-label">Datos Personales</div>
+
+                        <div class="row g-3 mb-3">
+                            <div class="col-sm-7">
+                                <label for="fechaNacimiento" class="form-label">Fecha de nacimiento</label>
+                                <input type="date" class="form-control" id="fechaNacimiento" name="fecha_nacimiento"
+                                    required>
+                                <div class="invalid-feedback">Seleccione su fecha de nacimiento.</div>
+                            </div>
+                            <div class="col-sm-5">
+                                <label class="form-label">Edad calculada</label>
+                                <div class="edad-badge" id="edadDisplay">— Seleccione fecha</div>
+                                <!-- Campo oculto con la edad -->
+                                <input type="hidden" id="edadOculta" name="edad" value="">
+                            </div>
+                        </div>
+
+                        <!-- GÉNERO -->
+                        <div class="mb-3">
+                            <label class="form-label d-block">Género</label>
+                            <div class="gender-grid">
+                                <div class="gender-option">
+                                    <input type="radio" name="genero" id="genMasculino" value="Masculino" required>
+                                    <label for="genMasculino">Masculino</label>
+                                </div>
+                                <div class="gender-option">
+                                    <input type="radio" name="genero" id="genFemenino" value="Femenino">
+                                    <label for="genFemenino">Femenino</label>
+                                </div>
+                                <div class="gender-option">
+                                    <input type="radio" name="genero" id="genOtro" value="Prefiero no decir">
+                                    <label for="genOtro">No indicar</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- INFORMACIÓN SOCIOECONÓMICA -->
+                        <div class="section-label">Información Socioeconómica</div>
+
+                        <div class="mb-3">
+                            <label for="rangoIngreso" class="form-label">Rango de ingreso mensual</label>
+                            <div class="range-wrapper">
+                                <input type="range" class="form-range" id="rangoIngreso" name="rango_ingreso" min="0"
+                                    max="5" step="1" value="0">
+                                <div class="range-labels">
+                                    <span>₡0</span>
+                                    <span>₡300k</span>
+                                    <span>₡600k</span>
+                                    <span>₡1M</span>
+                                    <span>₡2M</span>
+                                    <span>₡3M+</span>
+                                </div>
+                            </div>
+                            <span class="range-value-display" id="rangoDisplay">Menos de ₡300,000</span>
+                            <input type="hidden" id="rangoTexto" name="rango_ingreso_texto" value="Menos de ₡300,000">
+                        </div>
+
+                        <!-- drop down de grado academico -->
+                        <div class="grado-acad-dd">
+                            <label class="form-label d-block">Grado académico <span class="form-text d-inline">(puede
+                                    seleccionar varios)</span></label>
+                            <div class="multiselect-wrapper" id="gradoWrapper">
+                                <div class="multiselect-trigger" id="gradoTrigger">
+                                    <span id="gradoPlaceholder">Seleccionar grados...</span>
+                                    <span class="arrow">▼</span>
+                                </div>
+                                <div class="multiselect-dropdown" id="gradoDropdown">
+                                    <div class="multiselect-option" data-value="Primaria">
+                                        <span class="opt-check"></span> Primaria
+                                    </div>
+                                    <div class="multiselect-option" data-value="Secundaria">
+                                        <span class="opt-check"></span> Secundaria
+                                    </div>
+                                    <div class="multiselect-option" data-value="Técnico / Parauniversitario">
+                                        <span class="opt-check"></span> Técnico / Parauniversitario
+                                    </div>
+                                    <div class="multiselect-option" data-value="Bachillerato universitario">
+                                        <span class="opt-check"></span> Bachillerato universitario
+                                    </div>
+                                    <div class="multiselect-option" data-value="Licenciatura">
+                                        <span class="opt-check"></span> Licenciatura
+                                    </div>
+                                    <div class="multiselect-option" data-value="Posgrado / Maestría / PhD">
+                                        <span class="opt-check"></span> Posgrado / Maestría / PhD
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Chips de selección -->
+                            <div class="chips-container" id="gradoChips"></div>
+                            <!-- Inputs ocultos generados dinámicamente -->
+                            <div id="gradoHiddenInputs"></div>
+                        </div>
+
+                        <button type="submit" class="btn-submit">Enviar Registro</button>
+
+                    </form>
+                </div>
+
+
             </div>
 
 
 
+        </div>
+
     </div>
 
-
+    <!-- Mapa para EJ -->
 
 
 
@@ -136,7 +263,8 @@
             <div class="footer-col ">
                 <h4 class="text-center">Links</h4>
                 <ul>
-                    <li><a href="https://www.facebook.com/marketplace/profile/100001669719502">Compra en marketplace</a>
+                    <li><a href="https://www.facebook.com/marketplace/profile/100001669719502">Compra en
+                            marketplace</a>
                     </li>
                     <li><a href="#">Preguntas frecuentes</a></li>
                 </ul>
@@ -175,8 +303,10 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Script para la navegacion -->
-    <script src="assets/navigation.js"></script>
+
+
+    <!-- Script para el formulario -->
+    <script src="assets/formulario.js"></script>
 
 </body>
 
