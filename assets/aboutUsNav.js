@@ -1,38 +1,27 @@
-
-
-
-
-
-//funcion para inicializar las secciones ocultar 
-
+// Function to initialize 
 function initializeSections() {
-    const sectionNumber = 5
+    const sectionNumber = 6;
 
     for (let index = 1; index <= sectionNumber; index++) {
         const element = document.getElementById(`sectionAbout_${index}`);
-        element.classList.add("d-none");
+         if (element) {
+            element.classList.add("d-none");
+        }
     }
-
 }
 
-
-
-//funicion para revelar las secciones 
-
- function revealSection(sectionName){
+ function revealSection(sectionName) {
     let section = document.getElementById(sectionName);
-    section.classList.remove("d-none");
-
+    if (section) {
+        section.classList.remove("d-none");
+    }
 }
 
-
-
-$(document).ready(
-
-    //para que sea mas dinamico 
-
+ 
+$(document).ready(function() {
+    
+    // para dinamizarlo un poco
     $('.about-arrow-circle').hover(
-
         function () {
             $(this).stop().animate({
                 marginTop: "10px"
@@ -45,8 +34,6 @@ $(document).ready(
         }
     );
 
-    initializeSections();
+     initializeSections();
 
-
-
-);
+});
