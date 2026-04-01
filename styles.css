@@ -1863,3 +1863,7 @@ a {
 .about-arrow-circle .material-symbols-outlined {
   font-size: 1.3rem;
 }
+.about-arrow-circle:hover {
+  border-color: var(--primary);
+ 
+}
