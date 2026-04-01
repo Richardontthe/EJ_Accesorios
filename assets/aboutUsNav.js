@@ -1,3 +1,32 @@
+
+
+
+
+
+//funcion para inicializar las secciones ocultar 
+
+function initializeSections() {
+    const sectionNumber = 5
+
+    for (let index = 1; index <= sectionNumber; index++) {
+        const element = document.getElementById(`sectionAbout_${index}`);
+        element.classList.add("d-none");
+    }
+
+}
+
+
+
+//funicion para revelar las secciones 
+
+ function revealSection(sectionName){
+    let section = document.getElementById(sectionName);
+    section.classList.remove("d-none");
+
+}
+
+
+
 $(document).ready(
 
     //para que sea mas dinamico 
@@ -14,14 +43,10 @@ $(document).ready(
                 marginTop: "0px"
             }, 200);
         }
-    )
+    );
 
-
+    initializeSections();
 
 
 
 );
-
-
-
- 
