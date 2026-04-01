@@ -33,6 +33,18 @@ $(document).ready(function() {
             }, 200);
         }
     );
+    $('.glow-box').hover(
+        function () {
+            $(this).stop().animate({
+                marginTop: "10px"
+            }, 200);
+        },
+        function () {
+            $(this).stop().animate({
+                marginTop: "0px"
+            }, 200);
+        }
+    );
 
      initializeSections();
 
