@@ -1302,3 +1302,198 @@ a {
 .page-btn .material-symbols-outlined {
   font-size: 1.1rem;
 }
+
+/* =============================================
+   AUTOR — agregar al final de styles.css
+   No sobreescribe nada existente.
+   ============================================= */
+
+/* ---------- Banner de frase ---------- */
+.autor-frase-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  background: linear-gradient(135deg, var(--bg-dark) 0%, #1a0000 100%);
+  border-bottom: 2px solid var(--primary);
+  padding: 1rem 1.5rem;
+  text-align: center;
+}
+
+.autor-frase-text {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--accent);
+  font-style: italic;
+  margin: 0;
+  letter-spacing: 0.02em;
+}
+
+.autor-frase-icon {
+  color: var(--accent);
+  font-size: 1.1rem;
+  opacity: 0.8;
+}
+
+/* ---------- Hero del autor ---------- */
+.autor-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem 1rem;
+  text-align: center;
+}
+
+/* Foto con anillo */
+.autor-foto-wrapper {
+  position: relative;
+  width: 9rem;
+  height: 9rem;
+  margin-bottom: 1rem;
+}
+
+.autor-foto {
+  width: 100%;
+  height: 100%;
+  border-radius: 9999px;
+  object-fit: cover;
+  object-position: top;
+  position: relative;
+  z-index: 1;
+  border: 3px solid var(--bg-dark);
+}
+
+.autor-foto-ring {
+  position: absolute;
+  inset: -4px;
+  border-radius: 9999px;
+  background: linear-gradient(135deg, var(--primary), var(--dark-primary));
+  z-index: 0;
+}
+
+.autor-nombre {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #f1f5f9;
+  margin: 0 0 0.25rem;
+}
+
+.autor-rol {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* ---------- Cards de mi informacion ---------- */
+.autor-info-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--zinc-900);
+  border: 1px solid var(--zinc-800);
+  border-radius: 0.75rem;
+  padding: 0.875rem 1rem;
+  transition: border-color 0.2s;
+}
+
+.autor-info-card:hover {
+  border-color: var(--primary);
+}
+
+.autor-info-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.6rem;
+  background-color: rgba(227, 30, 36, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.autor-info-icon .material-symbols-outlined {
+  color: var(--primary);
+  font-size: 1.2rem;
+}
+
+.autor-info-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  min-width: 0;
+}
+
+.autor-info-label {
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+}
+
+.autor-info-value {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #f1f5f9;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.autor-email {
+  color: var(--accent) !important;
+  text-decoration: none;
+  font-size: 0.82rem;
+}
+
+.autor-email:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Sección del proyecto en acerca de ---------- */
+.autor-proyecto {
+  background-color: var(--zinc-900);
+  border: 1px solid var(--zinc-800);
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.autor-proyecto-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #f1f5f9;
+  margin: 0 0 0.6rem;
+}
+
+.autor-proyecto-desc {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.autor-proyecto-desc strong {
+  color: #f1f5f9;
+}
+
+/* Stack tecnológico */
+.autor-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.stack-pill {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.25rem 0.6rem;
+  border-radius: 9999px;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  background-color: rgba(227, 30, 36, 0.08);
+}
