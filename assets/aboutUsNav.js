@@ -18,6 +18,7 @@ function initializeSections() {
 }
 
  
+ 
 $(document).ready(function() {
     
     // para dinamizarlo un poco
@@ -47,5 +48,7 @@ $(document).ready(function() {
     );
 
      initializeSections();
+
+ 
 
 });
