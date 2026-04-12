@@ -92,7 +92,7 @@
             <div class="container-fluid px-3">
                 <div class="row g-3" id="productos-grid">
 
-                    <!-- Card de producto — se repetirá dinámicamente con fetch() -->
+                    <!-- tarjeta del producto -->
                     <div class="col-12 col-sm-6 col-md-4">
                         <div class="producto-card">
 
@@ -108,9 +108,9 @@
                                     Rack de aluminio resistente, compatible con la mayoría de vehículos.
                                     Soporta hasta 80 kg. Instalación sin perforar la carrocería.
                                 </p>
-                                <div class="producto-footer">
-                                    <span class="producto-precio">₡45.000</span>
-                                    <div class="producto-cantidad">
+                                <div class="producto-footer d-flex justify-content-center text-center">
+                                    <span class="producto-precio w-100">₡45.000</span>
+                                    <!-- <div class="producto-cantidad">
                                         <button class="cantidad-btn" aria-label="Disminuir">
                                             <span class="material-symbols-outlined">remove</span>
                                         </button>
@@ -118,12 +118,12 @@
                                         <button class="cantidad-btn" aria-label="Aumentar">
                                             <span class="material-symbols-outlined">add</span>
                                         </button>
-                                    </div>
+                                    </div> -->
                                 </div>
-                                <button class="btn-agregar-carrito w-100">
+                                <!-- <button class="btn-agregar-carrito w-100">
                                     <span class="material-symbols-outlined">shopping_cart</span>
                                     Agregar al carrito
-                                </button>
+                                </button> -->
                             </div>
 
                         </div>
@@ -236,6 +236,8 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
+    <!-- Script para cargar los prods -->
+    <script src="assets/cargarProductos.js"></script>
 
 </body>
 
