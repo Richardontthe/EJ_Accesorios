@@ -1485,12 +1485,7 @@ a {
   color: #f1f5f9;
 }
 
-/* Stack tecnológico */
-.autor-stack {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-}
+
 
 .stack-pill {
   font-size: 0.65rem;
@@ -1530,7 +1525,7 @@ a {
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* Ícono de sección */
+/* iconos de seccion */
 .about-section-icon-wrap {
   width: 3rem;
   height: 3rem;
