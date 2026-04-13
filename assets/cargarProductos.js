@@ -31,7 +31,7 @@ function renderProducts(products) {
                         <div class="producto-card">
 
                             <div class="producto-img-wrapper">
-                                <img src= "${producto.imagen}" alt="${producto.nombre}"
+                                <img src= "${producto.imagen}.jpg" alt="${producto.nombre}"
                                     class="producto-img" />
                                 <span class="producto-badge">${producto.categoria}</span>
                             </div>
@@ -88,6 +88,61 @@ async function loadPart(part) {
     }
 }
 
+// para colorear botones 
+
+function colorPaginationButton(partName){
+    let part1 = document.getElementById('prodPart1');
+    let part2 = document.getElementById('prodPart2');
+    let part3 = document.getElementById('prodPart3');
+    let part4 = document.getElementById('prodPart4');
+    let part5 = document.getElementById('prodPart5');
+
+
+    switch (partName) {
+        case "prodPart1":
+            part1.classList.add("page-btn-active");
+            part2.classList.remove("page-btn-active");
+            part3.classList.remove("page-btn-active");
+            part4.classList.remove("page-btn-active");
+            part5.classList.remove("page-btn-active");
+            break;
+        case "prodPart2":
+            part2.classList.add("page-btn-active");
+            part1.classList.remove("page-btn-active");
+            part3.classList.remove("page-btn-active");
+            part4.classList.remove("page-btn-active");
+            part5.classList.remove("page-btn-active");
+            break;
+        case "prodPart3":
+            part3.classList.add("page-btn-active");
+            part1.classList.remove("page-btn-active");
+            part2.classList.remove("page-btn-active");
+            part4.classList.remove("page-btn-active");
+            part5.classList.remove("page-btn-active");
+            break;
+        case "prodPart4":
+            part4.classList.add("page-btn-active");
+            part1.classList.remove("page-btn-active");
+            part2.classList.remove("page-btn-active");
+            part3.classList.remove("page-btn-active");
+             part5.classList.remove("page-btn-active");
+            break;
+        case "prodPart5":
+            part5.classList.add("page-btn-active");
+            part1.classList.remove("page-btn-active");
+            part2.classList.remove("page-btn-active");
+            part3.classList.remove("page-btn-active");
+             part4.classList.remove("page-btn-active");
+            break;
+   
+    }
+    
+}
+
+ 
+
+
+
 
 document.addEventListener("DOMContentLoaded", () => loadPart(1));
 
@@ -95,5 +150,27 @@ $(document).ready(function () {
 
     loadPart(1);
 
+    $("#prodPart1").click(function () {
+        loadPart(1);
+        colorPaginationButton("prodPart1");
+    } );
+    $("#prodPart2").click(function () {
+        loadPart(2);
+        colorPaginationButton("prodPart2");
+    });
+    $("#prodPart3").click(function () {
+        loadPart(3);
+        colorPaginationButton("prodPart3");
+    });
+    $("#prodPart4").click(function () {
+        loadPart(4);
+        colorPaginationButton("prodPart4");
+    });
+    $("#prodPart5").click(function () {
+        loadPart(5);
+        colorPaginationButton("prodPart5");
+    });
+ 
 
 });
+
