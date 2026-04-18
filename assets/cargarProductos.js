@@ -180,7 +180,6 @@ btnLimpiar.addEventListener("click", function () {
 
 
 
-document.addEventListener("DOMContentLoaded", () => loadPart(1));
 
 $(document).ready(function () {
 
