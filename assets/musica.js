@@ -46,11 +46,12 @@ $(document).ready(function () {
             let canciones = document.getElementById("musicBox");
 
             canciones.innerHTML = `
-      <p><strong>🎵 Canción:</strong> ${song.cancion}</p>
-      <p><strong>🎤 Artista:</strong> ${song.artista}</p>
-      <p><strong>💿 Álbum:</strong> ${song.album}</p>
-      <p><strong>🎸 Género:</strong> ${song.genero ?? "N/A"}</p>
-     `;
+                    <p><strong class="Ej-accent1">🎵 Canción:</strong> ${song.cancion}</p>
+                    <p><strong class="Ej-accent">🎤 Artista:</strong> ${song.artista}</p>
+                    <p><strong class="Ej-accent1">💿 Álbum:</strong> ${song.album}</p>
+                    <p><strong class="Ej-accent">🎸 Género:</strong> ${song.genero ?? "N/A"}</p>
+
+        `;
         } catch (error) {
             console.error("Error:", error);
         }
