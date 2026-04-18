@@ -434,6 +434,23 @@ a {
 }
 
 /* =============================================
+   Reel de facebook
+   ============================================= */
+
+   .reelCard {
+
+    background-color: var(--zinc-900);
+  border: 2px solid ;
+  border-image:  linear-gradient( to bottom , var(--accent), var(--primary) , var(--dark-primary));
+  border-radius: 0.9rem;
+  border-image-slice: 1;
+
+
+   }
+
+
+
+/* =============================================
    SOCIAL
    ============================================= */
 .social-section {
