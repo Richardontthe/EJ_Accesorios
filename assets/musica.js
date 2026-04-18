@@ -3,7 +3,7 @@ $(document).ready(function () {
 
 
 
-    // Lista de artistas populares para rotar aleatoriamente
+    // Lista de artistas populares 
     const ARTISTS = [
         "coldplay", "adele", "eminem", "taylor+swift", "the+beatles",
         "daft+punk", "queen", "michael+jackson", "beyonce", "ed+sheeran",
