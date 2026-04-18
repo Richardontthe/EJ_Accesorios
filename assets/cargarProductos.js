@@ -24,6 +24,7 @@ function getProductsByPart(part) {
 
 function renderProducts(products) {
     const container = document.getElementById("productos-grid");
+    let contadorProd = document.getElementById("productos-count");
     let htmlProd = '';
     products.forEach(producto => {
         htmlProd += `
@@ -69,6 +70,8 @@ function renderProducts(products) {
     });
 
     container.innerHTML = htmlProd;
+    contadorProd.textContent = `Mostrando ${products.length} productos`;
+    
 
 }
 
