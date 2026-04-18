@@ -5,6 +5,11 @@ const TOTAL_PARTS = 5;
 let allProducts = [];
 let currentPart = 1;
 
+ const buscador = document.getElementById("buscador-productos");
+const btnLimpiar = document.getElementById("btn-limpiar");
+
+
+
 async function fetchProducts() {
     if (allProducts.length > 0) return allProducts;
     const response = await fetch(API_URL);
@@ -142,7 +147,35 @@ function colorPaginationButton(partName){
     
 }
 
- 
+ buscador.addEventListener("input", function () {
+    const termino = buscador.value.toLowerCase().trim();
+    btnLimpiar.style.display = termino ? "inline-flex" : "none";
+
+    const productosFiltrados = allProducts.filter(p =>
+        p.nombre.toLowerCase().includes(termino) ||
+        p.descripcion.toLowerCase().includes(termino)
+    );
+
+    const sinResultados = document.getElementById("sin-resultados");
+
+    if (productosFiltrados.length === 0) {
+        document.getElementById("productos-grid").innerHTML = "";
+        document.getElementById("termino-buscado").textContent = termino;
+        sinResultados.classList.remove("d-none");
+        document.getElementById("productos-count").textContent = "Sin resultados";
+    } else {
+        sinResultados.classList.add("d-none");
+        renderProducts(productosFiltrados);
+    }
+});
+
+btnLimpiar.addEventListener("click", function () {
+    buscador.value = "";
+    btnLimpiar.style.display = "none";
+    document.getElementById("sin-resultados").classList.add("d-none");
+    const products = getProductsByPart(currentPart);
+    renderProducts(products);
+});
 
 
 
