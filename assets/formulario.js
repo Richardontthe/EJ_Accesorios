@@ -169,4 +169,5 @@ $('.multiselect-trigger')
     $(this).stop().animate({ marginBottom: "9rem" }, 200);
   });
  
-  
+
+

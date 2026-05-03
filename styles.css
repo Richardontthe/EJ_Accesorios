@@ -2004,3 +2004,93 @@
    box-shadow: 0 0 10px var(--primary), 0 0 20px var(--primary);
    transition: box-shadow 0.3s ease;
  }
+
+
+ /* =============================================
+   HORARIO  
+   ============================================= */
+
+.horario-section {
+  background-color: var(--bg-dark);
+}
+
+.horario-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.horario-header .about-section-icon-wrap {
+  margin-bottom: 0;   /* anula el mb del ícono reutilizado */
+  flex-shrink: 0;
+}
+
+.horario-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.horario-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--zinc-900);
+  border: 1px solid var(--zinc-800);
+  border-radius: 0.625rem;
+  padding: 0.65rem 0.875rem;
+}
+
+.horario-row-closed {
+  opacity: 0.5;
+}
+
+.horario-dia {
+  font-size: 0.8rem;
+  color: #f1f5f9;
+  font-weight: 500;
+}
+
+.horario-hora {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.horario-cerrado {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+/* Indicador de estado */
+.horario-estado {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.75rem;
+}
+
+.horario-estado-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 9999px;
+  flex-shrink: 0;
+}
+
+.horario-estado-dot.abierto {
+  background-color: #25d366;
+  box-shadow: 0 0 0 3px rgba(37, 211, 102, 0.2);
+}
+
+.horario-estado-dot.cerrado {
+  background-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(227, 30, 36, 0.2);
+}
+
+.horario-estado-texto {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
